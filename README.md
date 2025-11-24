@@ -1,10 +1,10 @@
 # README
 
 ## Overview
-This repository contains the full pipeline for drug–drug interaction (DDI) prediction using a biologically infused Drug–Target–Protein–Protein Interaction (DTPPI) network. The project integrates:
+This repository contains the full pipeline for drug–drug interaction (DDI) prediction using a biologically infused Drug–Target–Protein Knowledge Graph (DTP-KG) network. The project integrates:
 
 - Biological features (MeSH-based drug embeddings)
-- Topological features extracted from the DTPPI network
+- Topological features extracted from the DTP-KG network
 - A Latent Gated Fusion architecture that learns to merge both modalities inside a shared latent space
 
 The repo includes multiple fusion strategies, statistical significance tests (DeLong), grouped topological ablations, and a mechanistic case study.
@@ -14,7 +14,7 @@ The repo includes multiple fusion strategies, statistical significance tests (De
 ## Repository Structure (Short Descriptions)
 
 **BiologicalNetwork.py**  
-Constructs the DTPPI network.
+Constructs the DTP-KG network.
 
 **TopoFeatExtractor.py**  
 Leak-free extraction of topological features. Its compute_for_fold method removes DDI edges from validation/test to avoid information leakage.
