@@ -7,7 +7,7 @@ This repository contains the full pipeline for drug–drug interaction (DDI) pre
 - Topological features extracted from the DTPPI network
 - A Latent Gated Fusion architecture that learns to merge both modalities inside a shared latent space
 
-The repo includes multiple fusion strategies, statistical significance tests (DeLong), grouped topological ablations, inductive evaluation, and a mechanistic case study.
+The repo includes multiple fusion strategies, statistical significance tests (DeLong), grouped topological ablations, and a mechanistic case study.
 
 ---
 
@@ -64,7 +64,7 @@ Contains all experiment outputs:
 
 ---
 
-## Key Notebooks
+## Notebooks
 
 **LatentGate_MLP.ipynb**  
 Main notebook: loads data, trains baseline and fusion models using CV, computes DeLong p-values.
@@ -74,8 +74,3 @@ Runs grouped ablation experiments using topo-only models, producing summary plot
 
 **case_study.ipynb**  
 Splits a held-out test set, trains a topo-only model with early stopping, selects confident positive/negative predictions, and visualizes 2-hop mechanistic protein neighborhoods.
-
----
-
-## Summary
-This repository provides a full experimental framework for evaluating how biological and topological signals complement each other for DDI prediction. It includes fusion design comparisons, statistical verification of improvements, ablation studies for interpretability, and mechanistic case studies illustrating protein-level neighborhood overlap.
