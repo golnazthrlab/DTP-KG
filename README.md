@@ -50,9 +50,6 @@ Each notebook reports CV performance for baseline (Bio only) and fusion (Bio+Top
 ### PoC_MeSH/
 Experiments using different MeSH hierarchy levels across six drug categories. Includes all accuracy/AUC/F1/precision/recall plots and bin-level results.
 
-### networks/
-Contains the constructed DTPPI_network.graphml file.
-
 ### results/
 Contains all experiment outputs:
 - Cross-validation performance by category
