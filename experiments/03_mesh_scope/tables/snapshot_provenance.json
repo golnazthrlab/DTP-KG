@@ -1,0 +1,117 @@
+{
+  "description": "Aggregate-only figure snapshot; source records, predictions, embeddings and checkpoints are excluded.",
+  "tables": {
+    "training_log.csv": {
+      "source_sha256": "6ddda20076be7e20418d980153591941ebff059f531a8620923f11008d58a120",
+      "snapshot_sha256": "1db6a3b0e4a209782e7c0351b7d989f7e29df37e9e80c8d0c4eba21df74be375",
+      "columns": [
+        "feature_set",
+        "split_repeat",
+        "fold",
+        "best_val_auc"
+      ],
+      "row_filter": "all rows",
+      "rows": 45
+    },
+    "validation_metrics.csv": {
+      "source_sha256": "8a9ebf13fbc797bfcf1b5513d53c359f63d4f37c58580cc41d5543029dfb98a2",
+      "snapshot_sha256": "c78dc247c4f8929cc2f764954a13779df27f0e2785743a3a051379435bac9bb1",
+      "columns": [
+        "feature_set",
+        "split_repeat",
+        "fold",
+        "pair_bin",
+        "auc"
+      ],
+      "row_filter": "pair_bin == overall",
+      "rows": 45
+    },
+    "validation_scope_selection.csv": {
+      "source_sha256": "86e33c5f0d166669096e7abeeab37ba64e630929c96d46db6c602405c821e089",
+      "snapshot_sha256": "86e33c5f0d166669096e7abeeab37ba64e630929c96d46db6c602405c821e089",
+      "columns": [
+        "feature_set",
+        "mean",
+        "std",
+        "count",
+        "scope",
+        "preferred_by_validation_auc"
+      ],
+      "row_filter": "all rows",
+      "rows": 3
+    },
+    "results_pair_bins_per_fold.csv": {
+      "source_sha256": "95473fe4181cbecb2b36e5cb1deba3492fa16d7b6b427a1f6677b50b48ccbb5e",
+      "snapshot_sha256": "6f6e216c620c180c1dcb75a5413f54bfcc1e142e2a1f4b418ef9ef326d0aecd3",
+      "columns": [
+        "feature_set",
+        "split_repeat",
+        "fold",
+        "training_seed",
+        "inference_protocol",
+        "n_outer_train",
+        "n_outer_test",
+        "pair_bin",
+        "auc",
+        "f1",
+        "ap",
+        "mcc"
+      ],
+      "row_filter": "pair_bin != overall (six test categories)",
+      "rows": 270
+    },
+    "scope_comparisons_holm.csv": {
+      "source_sha256": "2412f46d122b9cf31732fb1de7df9d75a98635d41d10e37b97b8b6a063fc1be9",
+      "snapshot_sha256": "2412f46d122b9cf31732fb1de7df9d75a98635d41d10e37b97b8b6a063fc1be9",
+      "columns": [
+        "category",
+        "model_a",
+        "model_b",
+        "metric",
+        "family",
+        "estimate",
+        "ci_low",
+        "ci_high",
+        "p_raw",
+        "status",
+        "n_folds",
+        "confidence",
+        "interval_kind",
+        "se",
+        "df",
+        "p_holm",
+        "family_size",
+        "stars",
+        "direction"
+      ],
+      "row_filter": "all rows",
+      "rows": 72
+    }
+  },
+  "protocol": {
+    "source_run_plan_sha256": "8fc53539dc6d638dc4e373ab1b71a453bfc99a3f21a4e0f56d66667eb09d16e6",
+    "source_completion_sha256": "1d21c30989721ad64653908ba69e46bef206bd899c076327be67daaedbdbc436",
+    "snapshot_sha256": "637dd919fdee0c8f5a32a5c3f56f37890934b3795639ca0e15a69aeacfc98923",
+    "omitted_run_plan_fields": [
+      "input_sha256"
+    ],
+    "retained_completion_fields": [
+      "status",
+      "fits"
+    ]
+  },
+  "reference_figures": {
+    "mesh_depth_effect_heatmap.png": "1146af30f2c0877ebd30ed2709e3a508cd181c73ba06e67084a04c8658248d9a",
+    "mesh_depth_effect_heatmap_caption.txt": "69c2c32d49b935c703c9495ded4af6ae0dcfd30497596cf237ea715e00d266c4",
+    "mesh_scope_validation_selection.png": "9b26499e8e9bb08e7c800871e68c7630727ada78a55c1076b11db59307a27351",
+    "mesh_scope_validation_selection_caption.txt": "a88a5ac88772fb85e263ae7d9d7901b44b00868f5031232869a3d75613d99dc2"
+  },
+  "historical_source": {
+    "source_archive_sha256": "d6a5ea10f6940215ef85cb897514101f9c1e02ec01ec7e04aa74e644dba8240c",
+    "archive_included_in_public_release": false,
+    "recorded_sources_missing_from_archive": [
+      "FusionTrainer.py"
+    ],
+    "note": "The aggregate snapshot reproduces the saved figures. The historical archive omits FusionTrainer.py; the public training implementation does not claim byte-identical reconstruction of that missing source."
+  }
+}

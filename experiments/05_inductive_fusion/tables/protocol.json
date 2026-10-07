@@ -1,0 +1,115 @@
+{
+  "aggregation": "Average per-seed metrics within each drug holdout, then average the three holdouts equally",
+  "analysis_arm": "biological_only",
+  "depth_display": "Holm adjustment of all 60 depth tests; pointwise values are also retained",
+  "inference_spec": {
+    "contrasts": [
+      [
+        "fusion",
+        "baseline"
+      ],
+      [
+        "fusion",
+        "topo_only"
+      ]
+    ],
+    "correction_ratio": 0.1764983482774894,
+    "depth": {
+      "categories": [
+        "low_level-low_level",
+        "low_level-mid_level",
+        "low_level-deep_level",
+        "mid_level-mid_level",
+        "mid_level-deep_level",
+        "deep_level-deep_level"
+      ],
+      "family": "seen_unseen_depth_exploratory",
+      "family_size": 60,
+      "metrics": [
+        "auc",
+        "f1",
+        "prec",
+        "rec",
+        "acc"
+      ]
+    },
+    "df": 2,
+    "interpretation": "Approximate overlap correction; not an exact test for shared-drug/network dependence",
+    "n_holdouts": 3,
+    "overall": {
+      "categories": [
+        "overall"
+      ],
+      "family": "seen_unseen_overall_primary",
+      "family_size": 4,
+      "metrics": [
+        "auc",
+        "f1"
+      ]
+    },
+    "unit": "training-seed-averaged drug holdout"
+  },
+  "interpretation": "Overlapping drug selections; nine split\u2013seed runs per model are not nine independent holdouts",
+  "interval_kind": "between_holdout_sample_sd",
+  "models": [
+    "baseline",
+    "topo_only",
+    "fusion"
+  ],
+  "n_development_drugs": 2119,
+  "n_heldout_drugs": 374,
+  "note": "AUROC image equals the legacy seen_unseen_auroc_f1.png; this release uses the explicit AUROC filename.",
+  "number_of_neural_model_fits": 27,
+  "number_of_split_seed_runs": 9,
+  "policy": {
+    "heldout_nodes_in_training": false,
+    "inference_graph_variant": "no_ddi",
+    "neural_threshold": 0.5,
+    "training_graph_variant": "no_ddi"
+  },
+  "primary_figures": [
+    "seen_unseen_auroc.png",
+    "seen_unseen_f1.png"
+  ],
+  "reporting_revision_timing": "post_results",
+  "scenario": "seen_unseen",
+  "schema_version": 1,
+  "selection_protocol": {
+    "max_proposals": 200,
+    "min_heldout_drugs_per_class_per_depth_cell": 5,
+    "min_pairs_per_class_per_depth_cell": 20,
+    "n_holdouts": 3,
+    "name": "seen_unseen_count_constrained_rejection_v1",
+    "no_model_scores_used": true,
+    "pair_sampling": "balance_separately_within_six_MeSH_pair_categories_after_seen_filter",
+    "positive_sampling": "per_epoch",
+    "positive_to_negative_ratio": 1.0,
+    "primary_scenario": "seen_unseen",
+    "proposal_seed_start": 30000,
+    "seen_definition": "intersection_of_training_epoch_zero_endpoints",
+    "selection_order": "first_passing_proposals_in_ascending_seed_order",
+    "training_seeds": [
+      101,
+      202,
+      303
+    ],
+    "unseen_unseen": "ancillary_original_global_balancing_without_support_constraints",
+    "val_split": 0.15
+  },
+  "selection_seeds": [
+    30003,
+    30007,
+    30008
+  ],
+  "split_ids": [
+    "split_00",
+    "split_01",
+    "split_02"
+  ],
+  "training_seeds": [
+    101,
+    202,
+    303
+  ],
+  "uncertainty": "Figure bars are sample SD across three seed-averaged holdouts, not confidence intervals"
+}

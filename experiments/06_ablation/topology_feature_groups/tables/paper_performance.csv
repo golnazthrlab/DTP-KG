@@ -1,0 +1,5 @@
+Features,AUROC,F1
+All descriptors,0.9450 ± 0.0059,0.8674 ± 0.0094
+Without degree/size,0.8671 ± 0.0095,0.7945 ± 0.0103
+Without clustering/boundary,0.9397 ± 0.0066,0.8574 ± 0.0098
+Without centrality,0.9475 ± 0.0060,0.8727 ± 0.0082

@@ -1,0 +1,149 @@
+{
+  "study": "topological_features",
+  "source_run": "ablation/results/revision/topological_features",
+  "source_protocol_id": "f9b982ad7db8dd1fac8e1400812b3cf7e142d3cf734bcbea02d07bec4ee613b2",
+  "scope": "Aggregate scores only; no pair identities, predictions, graphs, checkpoints or private paths.",
+  "protocol": {
+    "snapshot_sha256": "e79e063e08f16683b2d7be6168c640fff7d89aa67093ac68586a0c463eb72c32",
+    "transformation": "Whitelisted public study metadata; source paths and record-level identities omitted."
+  },
+  "tables": {
+    "categories.csv": {
+      "snapshot_sha256": "3f90cf6a810c98bb9043b6fcf758acc4c3aae8615ed9d0d55326a105dc6dd1c5",
+      "rows": 120,
+      "columns": [
+        "category",
+        "model",
+        "metric",
+        "sd",
+        "estimate",
+        "ci_low",
+        "ci_high",
+        "se",
+        "n_folds",
+        "df",
+        "confidence",
+        "interval_kind",
+        "status"
+      ],
+      "source_sha256": "3f90cf6a810c98bb9043b6fcf758acc4c3aae8615ed9d0d55326a105dc6dd1c5",
+      "transformation": "Unchanged aggregate CSV."
+    },
+    "category_comparisons.csv": {
+      "snapshot_sha256": "8dddfaffa2f5a99f290118eb0ddb074f83f65b5645a499637d85fca6fc9165a8",
+      "rows": 90,
+      "columns": [
+        "category",
+        "model_a",
+        "model_b",
+        "metric",
+        "family",
+        "estimate",
+        "ci_low",
+        "ci_high",
+        "p_raw",
+        "status",
+        "n_folds",
+        "confidence",
+        "interval_kind",
+        "se",
+        "df",
+        "p_holm",
+        "family_size",
+        "stars",
+        "direction"
+      ],
+      "source_sha256": "8dddfaffa2f5a99f290118eb0ddb074f83f65b5645a499637d85fca6fc9165a8",
+      "transformation": "Unchanged aggregate CSV."
+    },
+    "comparisons.csv": {
+      "snapshot_sha256": "6513b5121a39358ad7860aefef9d0f2fcfe8278d7de5cc9133bceb832b2e9a23",
+      "rows": 6,
+      "columns": [
+        "category",
+        "model_a",
+        "model_b",
+        "metric",
+        "family",
+        "estimate",
+        "ci_low",
+        "ci_high",
+        "p_raw",
+        "status",
+        "n_folds",
+        "confidence",
+        "interval_kind",
+        "se",
+        "df",
+        "p_holm",
+        "family_size",
+        "stars",
+        "direction"
+      ],
+      "source_sha256": "6513b5121a39358ad7860aefef9d0f2fcfe8278d7de5cc9133bceb832b2e9a23",
+      "transformation": "Unchanged aggregate CSV."
+    },
+    "fold_metrics.csv": {
+      "snapshot_sha256": "b778c6389db4d8f4eac5a842a10a609fd32bb196b07abf826172f2612bfc4268",
+      "rows": 700,
+      "columns": [
+        "model",
+        "category",
+        "split_repeat",
+        "fold",
+        "training_seed",
+        "inference_protocol",
+        "n_outer_train",
+        "n_outer_test",
+        "auc",
+        "f1",
+        "prec",
+        "rec",
+        "acc"
+      ],
+      "source_sha256": "0b291fa1d250fa7b80620dc0ae0345aaa03d673b6162be40b76c4910d35c0fed",
+      "transformation": "Selected aggregate metric and split metadata columns."
+    },
+    "overall.csv": {
+      "snapshot_sha256": "2c360790bebdfc1dc55259569778b47658f82613437c8cd91f633b4de610eec2",
+      "rows": 8,
+      "columns": [
+        "category",
+        "model",
+        "metric",
+        "sd",
+        "estimate",
+        "ci_low",
+        "ci_high",
+        "se",
+        "n_folds",
+        "df",
+        "confidence",
+        "interval_kind",
+        "status"
+      ],
+      "source_sha256": "2c360790bebdfc1dc55259569778b47658f82613437c8cd91f633b4de610eec2",
+      "transformation": "Unchanged aggregate CSV."
+    },
+    "paper_contrasts.csv": {
+      "snapshot_sha256": "ee7e0f09e171f8e093c2de5d95ff60f194bc23191a86b8efa6233003ba67dc3e",
+      "rows": 3,
+      "columns": [
+        "Contrast",
+        "\u0394AUROC",
+        "\u0394F1"
+      ],
+      "transformation": "Compact paper table generated from verified aggregate summary and comparison tables."
+    },
+    "paper_performance.csv": {
+      "snapshot_sha256": "47de15b71802dfb24da78b17216c7d0e26be719a5284259aac5c30ffb574cdfd",
+      "rows": 4,
+      "columns": [
+        "Features",
+        "AUROC",
+        "F1"
+      ],
+      "transformation": "Compact paper table generated from verified aggregate summary and comparison tables."
+    }
+  }
+}

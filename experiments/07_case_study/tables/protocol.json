@@ -1,0 +1,62 @@
+{
+  "format_version": 1,
+  "study": "case_study",
+  "snapshot_date": "2026-09-21",
+  "model": "topo_only",
+  "radius_from_drug": 2,
+  "transductive_condition": "full graph; biological-only overlap sensitivity uses the same predictions",
+  "inductive_condition": "DDI-free graph for training, inference, and overlap",
+  "split_repeats": {
+    "transductive": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "inductive": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "training_seeds": {
+    "transductive": [
+      42000000000,
+      42000010000,
+      42000020000,
+      42000030000,
+      42000040000,
+      42001000000,
+      42001010000,
+      42001020000,
+      42001030000,
+      42001040000,
+      42002000000,
+      42002010000,
+      42002020000,
+      42002030000,
+      42002040000,
+      42003000000,
+      42003010000,
+      42003020000,
+      42003030000,
+      42003040000,
+      42004000000,
+      42004010000,
+      42004020000,
+      42004030000,
+      42004040000
+    ],
+    "inductive": [
+      101,
+      202,
+      303
+    ]
+  },
+  "aggregation": "equal-weight split means after averaging training seeds within folds and then folds",
+  "adjustment": "OLS residuals of average-tied ranks, intercept and ranked smaller/larger neighborhood sizes; residuals correlated without reranking",
+  "interpretation": "exploratory; descriptive variation, not confidence intervals"
+}

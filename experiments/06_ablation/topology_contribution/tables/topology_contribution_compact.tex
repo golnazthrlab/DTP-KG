@@ -1,0 +1,17 @@
+\begin{table}[t]
+\centering
+\caption{Adding topology by direct raw-input concatenation. Scores are mean $\pm$ SD across 25 matched folds. The difference is raw concat minus MeSH only; parentheses give Holm-adjusted $p$-values from approximate corrected-CV paired tests. Adjustment retains the original six-test family of three raw methods versus MeSH only across AUROC and F1, although only direct concat is shown. $^{**}$ indicates adjusted $p<0.01$; F1 uses threshold $0.5$.}
+\label{tab:raw-concat-topology}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}lcc@{}}
+\toprule
+Method or contrast & AUROC & F1 \\
+\midrule
+MeSH only & $0.9599\pm0.0063$ & $0.8955\pm0.0132$ \\
+Raw concat & $0.9744\pm0.0049$ & $0.9210\pm0.0107$ \\
+\midrule
+Raw concat $-$ MeSH only & \shortstack{$+0.01458^{**}$\\{\scriptsize $(0.0040)$}} & \shortstack{$+0.02543^{**}$\\{\scriptsize $(0.0050)$}} \\
+\bottomrule
+\end{tabular}
+\end{table}

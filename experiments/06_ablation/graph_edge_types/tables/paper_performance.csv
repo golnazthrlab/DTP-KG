@@ -1,0 +1,8 @@
+Model,Graph,AUROC,F1
+Latent gated fusion,Full,0.9885 ± 0.0033,0.9528 ± 0.0079
+Latent gated fusion,No DDI,0.9893 ± 0.0031,0.9545 ± 0.0094
+Latent gated fusion,DDI only,0.9881 ± 0.0040,0.9521 ± 0.0088
+Topology only,Full,0.9450 ± 0.0059,0.8674 ± 0.0094
+Topology only,No DDI,0.8744 ± 0.0135,0.7722 ± 0.0203
+Topology only,DDI only,0.9377 ± 0.0093,0.8657 ± 0.0113
+MeSH only (original),—,0.9666 ± 0.0047,0.9063 ± 0.0080

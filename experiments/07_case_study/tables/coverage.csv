@@ -1,0 +1,4 @@
+setting,scenario,n_prediction_rows,n_unique_pairs,n_unique_drugs,n_fits,n_positive_rows,n_negative_rows,n_zero_overlap_rows,n_both_target_rows
+transductive,transductive,32500,6500,1920,25,16250,16250,110,28475
+inductive,seen_unseen,25914,6904,1966,15,12957,12957,6822,22650
+inductive,unseen_unseen,2388,780,582,15,1194,1194,633,2109

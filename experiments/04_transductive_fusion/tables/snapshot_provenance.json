@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "scope": "Aggregate fold scores and inference underlying the paper figure; no record-level data.",
+  "training_performed_for_release": false,
+  "tables": {
+    "transductive_fusion_three_panel_summary_ci.csv": {
+      "source": "multimodal_fusion/results/task2_revision/figure_data/transductive_fusion_three_panel_summary_ci.csv",
+      "source_sha256": "3cfa1f9d644e7ed133aadfcb63d4839015cdc9daf654bbc308a86ad8076016d4",
+      "snapshot_sha256": "3cfa1f9d644e7ed133aadfcb63d4839015cdc9daf654bbc308a86ad8076016d4",
+      "rows": 60,
+      "columns": [
+        "category",
+        "model",
+        "metric",
+        "sd",
+        "estimate",
+        "ci_low",
+        "ci_high",
+        "se",
+        "n_folds",
+        "df",
+        "confidence",
+        "interval_kind",
+        "status"
+      ],
+      "transformation": "unchanged"
+    },
+    "transductive_fusion_three_panel_comparisons_holm.csv": {
+      "source": "multimodal_fusion/results/task2_revision/figure_data/transductive_fusion_three_panel_comparisons_holm.csv",
+      "source_sha256": "46e267f14edd0076bd81bb5eabba419d1032180fc926f53cc623567c165c4f65",
+      "snapshot_sha256": "46e267f14edd0076bd81bb5eabba419d1032180fc926f53cc623567c165c4f65",
+      "rows": 96,
+      "columns": [
+        "category",
+        "model_a",
+        "model_b",
+        "metric",
+        "family",
+        "estimate",
+        "ci_low",
+        "ci_high",
+        "p_raw",
+        "status",
+        "n_folds",
+        "confidence",
+        "interval_kind",
+        "se",
+        "df",
+        "p_holm",
+        "family_size",
+        "stars",
+        "direction"
+      ],
+      "transformation": "unchanged"
+    },
+    "fold_metrics.csv": {
+      "source": "multimodal_fusion/results/task2_revision/fold_metrics.csv",
+      "source_sha256": "0467b83d9aaca8e67e67d8fed6f8fa1cb66e036fef7efd7840fd825040c95dd4",
+      "snapshot_sha256": "8ba8b206f9794a36b775786684d8d7e4741c1868028833f8fb4687a93f006ff6",
+      "rows": 750,
+      "columns": [
+        "category",
+        "model",
+        "split_repeat",
+        "fold",
+        "training_seed",
+        "inference_protocol",
+        "n_outer_train",
+        "n_outer_test",
+        "auc",
+        "f1",
+        "prec",
+        "rec"
+      ],
+      "transformation": "Normalize bin to category; retain six pair-depth categories, five plotted models, split metadata and four reported metrics."
+    }
+  },
+  "original_render": {
+    "created_utc": "2026-09-29T12:29:25.358595+00:00",
+    "panels": [
+      "AUROC (five models)",
+      "F1 (five models)",
+      "Fusion\u2013MeSH (four metrics)"
+    ],
+    "layout": "one row, three panels; tables retained within panels a and b",
+    "holm_family_size": 96,
+    "n_outer_evaluations": 25,
+    "training_performed": false,
+    "reporting_family_revised_after_results": true,
+    "previous_family_archive": "docs/review_evidence_2026-09-29/transductive_holm_96/before",
+    "significance_markers": {
+      "dagger": "unadjusted p < 0.05 and Holm-adjusted p >= 0.05",
+      "stars": "Holm-adjusted p < 0.05; existing star levels retained",
+      "bold_table_entries": "Holm-adjusted p < 0.05",
+      "heatmap_direction": "signed values and colour scale"
+    },
+    "predictions_recomputed": false,
+    "t_tests_recomputed": false,
+    "heatmap_scale": {
+      "minimum": -0.1124155556368371,
+      "maximum": 0.1124155556368371,
+      "centre": 0
+    },
+    "inputs": {
+      "multimodal_fusion/results/task2_revision/figure_data/main_five_model_lines_summary_ci.csv": "5425688458423cd88211a6bb4effaa279ab51f0c02475cf5fc5036c97ba6d950",
+      "multimodal_fusion/results/task2_revision/figure_data/main_contrast_heatmaps_comparisons_holm.csv": "c22f9ca891a66749ea5008d1420487f94f275a716ab86e03697fd26bca548845",
+      "multimodal_fusion/results/task2_revision/figure_data/main_five_model_lines_comparisons_holm.csv": "c22f9ca891a66749ea5008d1420487f94f275a716ab86e03697fd26bca548845"
+    },
+    "code": {
+      "scripts/plot_transductive_three_panel.py": "caa72eb097c8f9dcd618e74429cca33a40c996719021173237c12b72795090ed",
+      "performance_reporting.py": "f2a32a4dc8b22f64f5233f6f95bff84b2a267ad394b20fa5d12c927477f0f21d",
+      "evaluation_stats.py": "7870e3983b1b3c8382dd363080af7dda8152ba82678e4ed2f1610e06f22a0292"
+    },
+    "outputs": {
+      "multimodal_fusion/figures/transductive_fusion_three_panel.png": "4550041dba572ae7f66d0e306e192a5e4da49033bcaa6ae7c030e33c0f14222b",
+      "multimodal_fusion/figures/transductive_fusion_three_panel.pdf": "6898a350254025c77776bb93c94ee34ef515e9e5d7838a50569df5dd4092c7ce",
+      "multimodal_fusion/results/task2_revision/figure_data/transductive_fusion_three_panel_caption.txt": "1eeb04ef0d304dd24e948aa371830982ce92217222be9d26b636d754cff92a58",
+      "multimodal_fusion/results/task2_revision/figure_data/transductive_fusion_three_panel_summary_ci.csv": "3cfa1f9d644e7ed133aadfcb63d4839015cdc9daf654bbc308a86ad8076016d4",
+      "multimodal_fusion/results/task2_revision/figure_data/transductive_fusion_three_panel_comparisons_holm.csv": "46e267f14edd0076bd81bb5eabba419d1032180fc926f53cc623567c165c4f65"
+    }
+  },
+  "protocol": {
+    "snapshot_sha256": "1e0b8c0038b3a4abac8a9ea70f59e380cec5bed11ba0f817bb53e1bcc87d4f29"
+  },
+  "figures": {
+    "transductive_fusion_three_panel.png": {
+      "source": "multimodal_fusion/figures/transductive_fusion_three_panel.png",
+      "source_sha256": "4550041dba572ae7f66d0e306e192a5e4da49033bcaa6ae7c030e33c0f14222b",
+      "snapshot_sha256": "4550041dba572ae7f66d0e306e192a5e4da49033bcaa6ae7c030e33c0f14222b"
+    },
+    "transductive_fusion_three_panel_caption.txt": {
+      "source": "multimodal_fusion/results/task2_revision/figure_data/transductive_fusion_three_panel_caption.txt",
+      "source_sha256": "1eeb04ef0d304dd24e948aa371830982ce92217222be9d26b636d754cff92a58",
+      "snapshot_sha256": "1eeb04ef0d304dd24e948aa371830982ce92217222be9d26b636d754cff92a58"
+    }
+  },
+  "provenance_note": "Original rendering code hashes above identify the recorded research implementation. Packaged implementation hashes are recorded separately each time the public plotting command runs."
+}

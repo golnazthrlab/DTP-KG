@@ -1,0 +1,4 @@
+Contrast,ΔAUROC,ΔF1
+All − without degree/size,+0.07798**,+0.07283**
+All − without clustering/boundary,+0.00537,+0.01002
+All − without centrality,-0.00249,-0.00529

@@ -1,0 +1,6 @@
+Model,Contrast,ΔAUROC,ΔF1
+Latent gated fusion,Full − no DDI,-0.00086,-0.00165
+Latent gated fusion,Full − DDI only,+0.00035,+0.00074
+Topology only,Full − no DDI,+0.07065**,+0.09515**
+Topology only,Full − DDI only,+0.00738,+0.00170
+Reference,No-DDI fusion − MeSH only (original),+0.02274**,+0.04821**

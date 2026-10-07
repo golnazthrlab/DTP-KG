@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "run_plan": {
+    "seed": 42,
+    "repeats": 3,
+    "folds": 5,
+    "epochs": 100,
+    "patience": 10,
+    "device": "cpu",
+    "threads": 1,
+    "pair_representation": "[a+b, abs(a-b)]",
+    "positive_sampling": "per_epoch",
+    "positive_to_negative_ratio": 1.0,
+    "batch_size": 128,
+    "hidden_dims": [
+      256,
+      128,
+      64
+    ],
+    "batchnorm": true,
+    "dropout": 0.3,
+    "optimizer": "Adam",
+    "lr": 0.001,
+    "weight_decay": 0.0,
+    "loss": "BCELoss on sigmoid output",
+    "validation_fraction": 0.15,
+    "checkpoint_metric": "validation AUROC",
+    "min_delta": 0.0001,
+    "decision_threshold": 0.5,
+    "scaler": "StandardScaler fitted incrementally to the full training schedule (all epochs' training pairs; held-out pairs never enter it) and frozen",
+    "scope_selection": "maximum mean restored-checkpoint validation AUROC; exact ties prefer shallower",
+    "inference": "approximate corrected paired CV t; Holm over 6 categories x 3 contrasts x 4 metrics",
+    "inference_metrics": [
+      "auc",
+      "f1",
+      "ap",
+      "mcc"
+    ],
+    "inference_family_size": 72,
+    "graph": "not used: MeSH-only scope experiment",
+    "limitations": [
+      "Common-coverage balanced benchmark, not deployment prevalence",
+      "Globally prepared fixed MeSH embeddings; transductive representation",
+      "Training reservoirs overlap across folds; shared-drug dependence not fully corrected",
+      "Not nested evaluation of scope selection; selected-scope test results remain exploratory"
+    ],
+    "python": "3.12.14",
+    "torch": "2.8.0+cu126",
+    "code_sha256": {
+      "mesh_scope/experiment.py": "f10fb704459e1ff6a62b8a21479afd85b2c5263558593511f9219de59d41c9bf",
+      "mesh_scope/reporting.py": "fbf43e39fe64e2c3c532e20b6ac4a2c554ab72e4aa7ede94517b58a56362dbba",
+      "mesh_scope/MLP.py": "81f1104a1ee66029376a8b17cb73899297b0d3e66aba92bb5d5c5df9dbfa2145",
+      "mesh_scope/mesh_scope_utils.py": "4e96a6f8f1bc52d26706889b6f748aca18cfbeec5959b2e5c57af3d146c0ccce",
+      "mesh_scope/dataloader.py": "26f8fb1dd68d5e811b1dbddd1f765144cadfb92f9ed6f34b40dcdab4b4136357",
+      "mesh_scopes.py": "d14f5230ab5db251481fc02ecf911f44a88f45162df8c4305717ac59a5d5a554",
+      "MeSHDataLoaders.py": "8e4a2ca4be003e377644f3c1b5fa3fd5ee28c01171dec32ed9f6d52202bac275",
+      "FusionTrainer.py": "55406f9274218376e25bc1c3b5029470a3e1aeb3389a211444647f4fc101fef3",
+      "ddi_sampling.py": "99510f6ba5f8b3be6a98ecdb6759e289cbe2228d7baeb92fd6ba5a94be0a3a73",
+      "ddi_labels.py": "ca5b17ec8e5abe7a819f8d24e06dbdcb25a86230d833cc9d9acebcb87a64c0ce",
+      "evaluation_inputs.py": "3cd34e84179b6f68ba2daddc51dba30dfa1279e407352c433d0dbbe5d9dfe971",
+      "evaluation_stats.py": "7870e3983b1b3c8382dd363080af7dda8152ba82678e4ed2f1610e06f22a0292",
+      "utils.py": "941258f202e22fd1d6e9dc4245b5b43d1d98ba61c66f587f29a8e79d93d70156"
+    }
+  },
+  "completion": {
+    "status": "complete",
+    "fits": 45
+  }
+}

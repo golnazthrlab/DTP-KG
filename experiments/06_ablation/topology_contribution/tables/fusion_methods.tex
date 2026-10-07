@@ -1,0 +1,18 @@
+\begin{table}[t]
+\centering
+\caption{Input-level fusion methods compared with latent gating. Scores are mean $\pm$ SD across 25 matched folds. Differences are method minus latent gate; parentheses give Holm-adjusted $p$-values from approximate corrected-CV paired tests across the separate six-test fusion family (three methods by AUROC and F1). $^{**}$ indicates adjusted $p<0.01$; F1 uses threshold $0.5$.}
+\label{tab:fusion-methods}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcccc@{}}
+\toprule
+Method & AUROC & $\Delta$AUROC & F1 & $\Delta$F1 \\
+\midrule
+Raw concat & $0.9744\pm0.0049$ & \shortstack{$-0.01401^{**}$\\{\scriptsize $(0.0003)$}} & $0.9210\pm0.0107$ & \shortstack{$-0.03187^{**}$\\{\scriptsize $(0.0003)$}} \\
+\cmidrule(lr){1-5}
+Fixed $\alpha=4$ & $0.9774\pm0.0050$ & \shortstack{$-0.01111^{**}$\\{\scriptsize $(0.0011)$}} & $0.9252\pm0.0104$ & \shortstack{$-0.02765^{**}$\\{\scriptsize $(0.0011)$}} \\
+\cmidrule(lr){1-5}
+Learned $\alpha$ & $0.9767\pm0.0041$ & \shortstack{$-0.01180^{**}$\\{\scriptsize $(0.0003)$}} & $0.9257\pm0.0087$ & \shortstack{$-0.02710^{**}$\\{\scriptsize $(0.0003)$}} \\
+\cmidrule(lr){1-5}
+\textbf{Latent gate} & $\mathbf{0.9885\pm0.0033}$ & --- & $\mathbf{0.9528\pm0.0079}$ & --- \\
+\bottomrule
+\end{tabular*}
+\end{table}

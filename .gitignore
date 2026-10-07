@@ -1,0 +1,37 @@
+# Private input and intermediate data (including directory symlinks).
+/data/*
+!/data/README.md
+!/data/DataPreparation.ipynb
+
+# Local environments, caches, execution logs, and configuration.
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+.DS_Store
+.env
+.env.*
+*.log
+*.egg-info/
+/build/
+/dist/
+
+# Generated records, models, and network exports remain local.
+*.graphml
+*.gpickle
+*.pkl
+*.pickle
+*.joblib
+*.npy
+*.npz
+*.pt
+*.pth
+*.h5
+*.xml
+*.zip
+/experiments/**/figures/data/
+/experiments/**/figures/reproduced/
+/experiments/**/results/
+/experiments/**/checkpoints/

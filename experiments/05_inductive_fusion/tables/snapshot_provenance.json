@@ -1,0 +1,54 @@
+{
+  "code_sources": {
+    "compact_figures.py": "9df203a0e8d2da5181e2e2eb3675eeb0a0ffa12a242e7346bdeb6956529b40a3",
+    "holm_figures.py": "7a64aa09754d3f001d6dd2442b57ca7876c3bed91b5b0c7e4256c0dd8c4f7c99",
+    "paired_figures.py": "0327041fd636223f03a77505a7540f77149dcd25a380127d4c7952dcd98fad98",
+    "plot_single_figures.py": "be7946e13263c0effebb0f67034605bb8f49317a492d3fa9af6ffd4f35fc4840",
+    "seen_unseen_analysis.py": "f8d1f487447d08a30edddaef5e9d341e47b45ffe37212a0b068e3176bfbed8ab"
+  },
+  "content": "Aggregate metrics, summaries, and comparisons only; no drug identities or pair records",
+  "figures": {
+    "seen_unseen_auroc.png": "ce3d419b07073e2106df2172e069f30579274c172109d0520c583f6c8754d622",
+    "seen_unseen_auroc_caption.txt": "f4c139e7fd9213d4376c00e9a3dc78776907a9e005f74d1b55ffdde57dadff31",
+    "seen_unseen_f1.png": "f4e7f1c210c9271dff001bd6b7b0a48be02a1919fe913f8a4817bc9d4c95c2ba",
+    "seen_unseen_f1_caption.txt": "f8f8eb73596ea02e3332361e7d1553fa6997255aa5f06e0ed53ea12a95bb917b"
+  },
+  "files": {
+    "protocol.json": "cc6082670d63ce1ff3dd0a8bf815820462db83bda3b809d14c8ee234b6dbd319",
+    "seen_unseen_depth_pointwise_comparisons.csv": "658520a7ea5570aea75a651d8f72463a1afb86fb4600e1f81d762c2750121cd8",
+    "seen_unseen_overall_comparisons.csv": "7e3fce7ceb0cbe109a5bc679da431dd0e5a53a2d773ab0c42b92ef7839b6abaf",
+    "seen_unseen_per_split_seed_metrics.csv": "1b656e57c58889d3d0cfa8d8e4d5fc20632d25ea2eb4090a74ec46447514e902",
+    "seen_unseen_summary.csv": "d6bde4fd68f9545962b0ea6a8c5644cf1cd0bd0aa1f4f020ec0f2b5aea7b74ae"
+  },
+  "metric_filter": "Only overall/depth seen_unseen rows for baseline, topo_only, fusion; original 189 rows retained",
+  "original_sources": {
+    "results/figure_exports/figure_provenance.json": "28e004310b1e9f2af1af3292f86ef9e72ec6383df236c5fc94bcfdf50ca0f04b",
+    "results/figure_exports/seen_unseen_depth_pointwise_comparisons.csv": "658520a7ea5570aea75a651d8f72463a1afb86fb4600e1f81d762c2750121cd8",
+    "results/figure_exports/seen_unseen_overall_comparisons.csv": "7e3fce7ceb0cbe109a5bc679da431dd0e5a53a2d773ab0c42b92ef7839b6abaf",
+    "results/figure_exports/seen_unseen_summary.csv": "d6bde4fd68f9545962b0ea6a8c5644cf1cd0bd0aa1f4f020ec0f2b5aea7b74ae",
+    "results/task3_seen_unseen_v1/biological_only/seen_unseen/per_split_seed_metrics.csv": "117dd30a6009afb7a86a68c677e023d93d17d3bdcf03b0992af1098593d3f1fd",
+    "results/task3_seen_unseen_v1/biological_only/seen_unseen/run_manifest.json": "9aa734a2258252778d86b3ccb4bb7c3c80cc990ec9c5dd1bd272993cb4f0de46"
+  },
+  "schema_version": 1,
+  "selected_metric_columns": [
+    "scenario",
+    "group_kind",
+    "category",
+    "analysis_arm",
+    "split_id",
+    "split_repeat",
+    "training_seed",
+    "model",
+    "n_heldout_drugs",
+    "n_development_drugs",
+    "n",
+    "n_pos",
+    "n_neg",
+    "auc",
+    "f1",
+    "prec",
+    "rec",
+    "acc",
+    "ap"
+  ]
+}

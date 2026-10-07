@@ -1,0 +1,4 @@
+feature_set,mean,std,count,scope,preferred_by_validation_auc
+low_level,0.965560491399341,0.00646978865397107,15,Shallow,False
+mid_level,0.9775525433251979,0.0052632291542892935,15,Intermediate,True
+deep_level,0.972009376152266,0.005203130230374811,15,Full,False

@@ -1,0 +1,12 @@
+{
+  "repeats": 5,
+  "folds": 5,
+  "n_outer_evaluations": 25,
+  "holm_family": "exploratory_five_model_depth_96",
+  "holm_family_size": 96,
+  "confidence": 0.95,
+  "inference": "Pointwise approximate corrected-CV intervals; matched repeated outer folds. Shared-drug/network dependence is not fully accounted for.",
+  "reporting_family_revised_after_results": true,
+  "previous_holm_family_size": 120,
+  "previous_family_note": "Historical outputs retained in the original research workspace; only the current 96-test figure inputs are included here."
+}

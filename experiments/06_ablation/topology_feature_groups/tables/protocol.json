@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "study": "topological_features",
+  "models": [
+    "all_descriptors",
+    "without_degree_size",
+    "without_clustering_boundary",
+    "without_centrality"
+  ],
+  "repetitions": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "folds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "n_fits": 100,
+  "contrasts": [
+    [
+      "all_descriptors",
+      "without_degree_size"
+    ],
+    [
+      "all_descriptors",
+      "without_clustering_boundary"
+    ],
+    [
+      "all_descriptors",
+      "without_centrality"
+    ]
+  ],
+  "primary_metrics": [
+    "auc",
+    "f1"
+  ],
+  "category_metrics": [
+    "auc",
+    "f1",
+    "prec",
+    "rec",
+    "acc"
+  ],
+  "categories": [
+    "overall",
+    "low_level-low_level",
+    "low_level-mid_level",
+    "low_level-deep_level",
+    "mid_level-mid_level",
+    "mid_level-deep_level",
+    "deep_level-deep_level"
+  ],
+  "confidence": 0.95,
+  "feature_groups": {
+    "degree_size": [
+      "deg_total",
+      "deg_drug",
+      "deg_prot",
+      "deg_min",
+      "deg_max",
+      "deg_mean",
+      "deg_std",
+      "n_nodes_subgraph"
+    ],
+    "clustering_boundary": [
+      "clust_local",
+      "boundary_ratio"
+    ],
+    "centrality": [
+      "close_local",
+      "katz_local"
+    ]
+  },
+  "graph_variants": {
+    "full": "All five canonical relation types.",
+    "no_ddi": "All non-DDI relations, including protein-target and target-target edges.",
+    "ddi_only": "Drug-drug interaction edges only."
+  },
+  "primary_family_size": 6,
+  "depth_family_size": 90,
+  "inference": "approximate corrected-CV; test/development size correction",
+  "inferential_limit": "Conditions on the cohort and graph; shared-drug and network dependence remain.",
+  "primary_threshold": "Neural models use 0.5; diagnostic thresholds use inner validation."
+}
